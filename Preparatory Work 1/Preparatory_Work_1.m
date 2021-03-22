@@ -24,5 +24,4 @@ G3=1/(Ra+La*s);
 G4=Km;
 G5=1/(J*s+f);
 G6=Kb;
-
 Gvt=feedback(G3*G4*G5,G6)/s;
