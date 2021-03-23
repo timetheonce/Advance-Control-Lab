@@ -55,7 +55,7 @@ plot(SimPG1.tout,SimPG1.ScopeData1.signals.values)
 xlabel('time [seconds]')
 ylabel('\theta [rad]')
 title('step response for PG_1')
-
+grid on
 
 % Step response for PG2
 figure
@@ -66,24 +66,26 @@ grid on
 title('step response for PG_2')
 
 %% Question 4
-PG1=step(Gvt*G1);
-PG2=step(Gvt*G2);
-
+close all
 % Step response for PG1
 figure
-plot(PG1)
+step(Gvt*G1)
 xlabel('time [seconds]')
 ylabel('\theta [rad]')
 title('step response for PG_1')
 grid on
+xlim([0 100])
 
 % Step response for PG2
 figure
-plot(PG2)
+step(Gvt*G2)
 xlabel('time [seconds]')
 ylabel('\theta [rad]')
 title('step response for PG_2')
 grid on
+xlim([0 50])
+
+
 
 %% Question 5
 
