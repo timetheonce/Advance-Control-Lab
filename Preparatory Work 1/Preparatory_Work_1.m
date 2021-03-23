@@ -13,7 +13,7 @@ step(G2)
 grid on
 title('Step response for $G_2$','Interpreter','latex')
 
-%%
+%% Question 2
 Km=39.6/1000; %[Nm/A]
 Kb=6.46/1000/pi*60; %[V/rad]
 Ra=6.8; %[Ohm]
@@ -43,4 +43,26 @@ hold on
 bode(Gvts,'g')
 hold off
 legend('with La','without La')
+
+
+%% Question 3
+SimPG1=sim('Q3G1block.slx');
+SimPG2=sim('Q3G2block.slx');
+
+% Step response for PG1
+figure
+plot(SimPG1.tout,SimPG1.ScopeData1.signals.values)
+xlabel('time [seconds]')
+ylabel('\theta [rad]')
+grid on
+title('step response for PG_1')
+
+% Step response for PG2
+figure
+plot(SimPG2.tout,SimPG2.ScopeData1.signals.values)
+xlabel('time [seconds]')
+ylabel('\theta [rad]')
+grid on
+title('step response for PG_2')
+
 
