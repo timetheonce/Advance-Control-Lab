@@ -88,20 +88,12 @@ xlim([0 50])
 
 
 %% Question 5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+close all
+syms Nr
+G3N=1/(Ra+La*s);
+G4N=Km*Nr;
+G5N=1/(J*s+f);
+G6N=Kb*Nr;
 
 
 
