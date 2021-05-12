@@ -1,18 +1,21 @@
 clear; clc; close all;
 load('data_1.mat')
-figure()
+
+figure
 plot(r_1.time,r_1.signals.values,'linewidth',2)
-xlabel('time')
+xlabel('time[s]')
 ylabel('amplitude')
 grid on
-figure()
+
+figure
 plot(u_1.time,u_1.signals.values,'linewidth',2)
-xlabel('time')
+xlabel('time[s]')
 ylabel('amplitude')
 grid on
-figure()
+
+figure
 plot(y_1.time,y_1.signals.values,'linewidth',2)
-xlabel('time')
+xlabel('time[s]')
 ylabel('arm degree[^o]')
 grid on
 ylim([-360 360])
