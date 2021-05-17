@@ -1,7 +1,7 @@
 clear
 clc
 close all
-%cd 'E:\OneDrive\学习\大四下spring 2021\Advance Control Lab\Advance-Control-Lab\Preparatory Work 3';
+cd 'E:\OneDrive\学习\大四下spring 2021\Advance Control Lab\Advance-Control-Lab\Preparatory Work 3';
 load('SIMULINK Q1.mat');
 s=tf('s');
 format short
@@ -36,6 +36,14 @@ TF_du=-C*P/(1+C*P); % Transfer function from d to u
 plot(time,y1,time,y2,'--'); xlabel('time [sec]'); ylabel('response y')
 grid on; legend('r(t)=1, d(t)=0','r(t)=0, d(t)=1')
 
+%% Q1 Part 2
+s=tf('s');
+Kp=20;Ki=14;Kd=4;N=100;
+C=Kp*(1+Ki/s+Kd*N/(1+N*1/s));
+P=(10)/(s*(s+10));
+
+TF_ru=C/(1+C*P); % Transfer function from r to u
+TF_du=-C*P/(1+C*P); % Transfer function from d to u
 
 
 
