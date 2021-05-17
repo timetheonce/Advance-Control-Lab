@@ -45,6 +45,29 @@ P=(10)/(s*(s+10));
 TF_ru=C/(1+C*P); % Transfer function from r to u
 TF_du=-C*P/(1+C*P); % Transfer function from d to u
 
+%% Q2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
